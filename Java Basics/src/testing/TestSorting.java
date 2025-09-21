@@ -2,6 +2,7 @@ package testing;
 
 import SortingAlgos.*;
 import java.util.Scanner;
+import java.util.Arrays;
 
 
 public class TestSorting {
@@ -21,7 +22,7 @@ public class TestSorting {
             nums[i] = sc.nextInt();
         }
 
-        String selectionText = "Choose the Sorting Algorithm to implement: \n  --> Case 1 (1): Selection Sort \n  --> Case 2 (2): Insertion Sort ";
+        String selectionText = "Choose the Sorting Algorithm to implement: \n  --> Case 1 (1): Selection Sort \n  --> Case 2 (2): Insertion Sort \n  --> Case 3 (3): Inbuilt Sort \n";
         System.out.println(selectionText);
 
         int selection = sc.nextInt();
@@ -36,6 +37,11 @@ public class TestSorting {
 
                 case 2:
                     InsertionSort.insertionSort(nums);
+                    goodinput = false;
+                    break;
+
+                case 3:
+                    Arrays.sort(nums);
                     goodinput = false;
                     break;
 
@@ -55,6 +61,9 @@ public class TestSorting {
         System.out.println(nums[nums.length-1] + "]");
 
         System.out.println();
+
+        System.out.println(Arrays.toString(nums));
+
         System.out.print("*---------------------------------------------------------------------------------------------------------------------------------*");
         sc.close();
     }
