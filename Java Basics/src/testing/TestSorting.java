@@ -21,7 +21,7 @@ public class TestSorting {
             nums[i] = sc.nextInt();
         }
 
-        String selectiontext = "Choose the Sorting Algorithm to implement: \n  --> Case 1 (1): Selection Sort";
+        String selectiontext = "Choose the Sorting Algorithm to implement: \n  --> Case 1 (1): Selection Sort \n  --> Case 2 (2): Insertion Sort ";
         System.out.println(selectiontext);
 
         int selection = sc.nextInt();
@@ -33,6 +33,12 @@ public class TestSorting {
                     SelectionSort.selectionSort(nums);
                     goodinput = false;
                     break;
+
+                case 2:
+                    InsertionSort.insertionSort(nums);
+                    goodinput = false;
+                    break;
+
                 default:
                     System.out.println("Please provide cases from the given menu like 1 or 2 or 3 or 4. ");
                     System.out.println(selectiontext);

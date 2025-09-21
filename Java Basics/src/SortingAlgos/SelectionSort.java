@@ -1,18 +1,24 @@
 package SortingAlgos;
 
 public class SelectionSort {
-    public static int[] selectionSort(int[] nums){
+    public static void selectionSort(int[] nums){
 
         for( int i=0 ; i<nums.length ; i++){
+            int minIndex = i;
             for(int j=i+1 ; j<nums.length ; j++){
-                if( Math.min(nums[i],nums[j]) == nums[j]){
-                    int temp = nums[i];
-                    nums[i] = nums[j];
-                    nums[j] = temp;
+                if( nums[minIndex] > nums[j]){
+                    minIndex = j;
                 }
             }
+
+            if(minIndex != i){
+                int temp = nums[i];
+                nums[i] = nums[minIndex];
+                nums[minIndex] = temp;
+            }
+
+
         }
 
-        return nums;
     }
 }
