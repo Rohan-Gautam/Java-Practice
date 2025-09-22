@@ -22,7 +22,7 @@ public class TestSorting {
             nums[i] = sc.nextInt();
         }
 
-        String selectionText = "Choose the Sorting Algorithm to implement: \n  --> Case 1 (1): Selection Sort \n  --> Case 2 (2): Insertion Sort \n  --> Case 3 (3): Inbuilt Sort \n";
+        String selectionText = "Choose the Sorting Algorithm to implement: \n  --> Case 1 (1): Selection Sort \n  --> Case 2 (2): Insertion Sort \n  --> Case 3 (3): Inbuilt Sort \n  --> Case 4 (4): Counting Sort ";
         System.out.println(selectionText);
 
         int selection = sc.nextInt();
@@ -42,6 +42,11 @@ public class TestSorting {
 
                 case 3:
                     Arrays.sort(nums);
+                    goodinput = false;
+                    break;
+
+                case 4:
+                    CountingSort.countingSort(nums);
                     goodinput = false;
                     break;
 
