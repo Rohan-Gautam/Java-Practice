@@ -1,17 +1,17 @@
 package SortingAlgos;
 
 public class SelectionSort {
-    public static void selectionSort(int[] nums){
+    public static void selectionSort(int[] nums) {
 
-        for( int i=0 ; i<nums.length ; i++){
+        for (int i = 0; i < nums.length; i++) {
             int minIndex = i;
-            for(int j=i+1 ; j<nums.length ; j++){
-                if( nums[minIndex] > nums[j]){
+            for (int j = i + 1; j < nums.length; j++) {
+                if (nums[minIndex] > nums[j]) {
                     minIndex = j;
                 }
             }
 
-            if(minIndex != i){
+            if (minIndex != i) {
                 int temp = nums[i];
                 nums[i] = nums[minIndex];
                 nums[minIndex] = temp;
